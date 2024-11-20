@@ -1,0 +1,40 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>nextlogic-logo-svg</title>
+	<style>
+		.s0 { fill: #822b14 } 
+		.s1 { fill: #75361b } 
+		.s2 { fill: #57321a } 
+		.s3 { fill: #a63016 } 
+		.s4 { fill: #a83116 } 
+		.s5 { fill: #e8202e } 
+		.s6 { fill: #db2121 } 
+		.s7 { fill: #f55359 } 
+		.s8 { fill: #e8232d } 
+		.s9 { fill: #852e14 } 
+		.s10 { fill: #543019 } 
+		.s11 { fill: #75351a } 
+		.s12 { fill: #f55159 } 
+		.s13 { fill: #f57d7f } 
+		.s14 { fill: #dc2121 } 
+	</style>
+	<g id="nxtl-log-red">
+		<path id="Layer" class="s0" d="m64 256l11.2-48.5 52.5-6.3z"/>
+		<path id="Layer" class="s1" d="m73.5 144l54.2 57.2-52.5 6.3z"/>
+		<path id="Layer" class="s2" d="m47.5 192.9l26-48.9 1.7 63.5z"/>
+		<path id="Layer" class="s3" d="m47.5 192.9l26-48.9-60.7 4.7z"/>
+		<path id="Layer" class="s4" d="m127.7 201.2l23.6-74.2-77.8 17z"/>
+		<path id="Layer" class="s2" d="m151.3 127l53.3 45-76.9 29.2z"/>
+		<path id="Layer" class="s5" d="m204.6 172l43.1-59.2-31.7-21.4z"/>
+		<path id="Layer" class="s6" d="m151.3 127l53.3 45 11.4-80.6z"/>
+		<path id="Layer" class="s7" d="m161.8 54.8l-10.5 72.2 64.7-35.6z"/>
+		<path id="Layer" class="s8" d="m151.3 127l-96-48.5 106.5-23.7z"/>
+		<path id="Layer" class="s9" d="m151.3 127l-96-48.5 18.2 65.5z"/>
+		<path id="Layer" class="s10" d="m12.8 148.7l-4-59.9 46.5-10.3z"/>
+		<path id="Layer" class="s11" d="m55.3 78.5l-42.5 70.2 60.7-4.7z"/>
+		<path id="Layer" class="s4" d="m51.9 26.8l49.9 41.4-46.5 10.3-46.5 10.3z"/>
+		<path id="Layer" class="s12" d="m161.8 54.8l-109.9-28 49.9 41.4z"/>
+		<path id="Layer" class="s13" d="m223.4 39.4l-61.6 15.4 54.2 36.6 31.7 21.4z"/>
+		<path id="Layer" class="s8" d="m161.8 54.8l-27.3-54.8 88.9 39.4z"/>
+		<path id="Layer" class="s14" d="m161.8 54.8l-27.3-54.8-82.6 26.8z"/>
+	</g>
+</svg>
