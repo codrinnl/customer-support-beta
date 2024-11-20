@@ -738,3 +738,22 @@ p.text-light {
 .main-header .main-nav > li > a:hover {
   color: #000; /* Black for hover */
 }
+
+.carousel-container .flickity-button {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border: 2px solid #ffcc00; /* Bright yellow border for contrast */
+  border-radius: 50%; /* Circular shape */
+  width: 40px;
+  height: 40px;
+  color: #ffffff; /* White arrow color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.carousel-container .flickity-button:hover {
+  background-color: #ffcc00; /* Bright yellow on hover */
+  color: #000000; /* Black arrow color on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
