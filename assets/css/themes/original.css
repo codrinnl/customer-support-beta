@@ -10,7 +10,7 @@ html {
 
 
 :root {
-    --color-primary: #f6cd02;
+    --color-primary: #4D4100 ;
     --color-secondary: #222222;
     --color-tertiary: #F0F0F0;
 
@@ -651,6 +651,13 @@ p.text-yellow {
     letter-spacing: 1px; /* Little more spacing for clarity */
 }
 
+p.text-dark-yellow {
+    font-size: 22px !important; /* Slightly larger subheading */
+    color: #4D4100 ; /* Yellow text to stand out */
+    font-weight: 600;
+    letter-spacing: 1px; /* Little more spacing for clarity */
+}
+
 /* Description Text */
 p.text-light {
     font-size: 22px; /* Increased font size for readability */
@@ -727,13 +734,34 @@ p.text-light {
     text-transform: uppercase; /* Optional: Make text uppercase */
 }
 
-.btn-outline-black:hover {
-    background-color: #000; /* Black background on hover */
-    color: #fff; /* White text on hover */
-    border-color: #000; /* Keep the border black */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+/*.btn-outline-black:hover {*/
+/*    background-color: #000; !* Black background on hover *!*/
+/*    color: #fff; !* White text on hover *!*/
+/*    border-color: #000; !* Keep the border black *!*/
+/*    transform: translateY(-2px); !* Slight lift effect *!*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); !* Add shadow on hover *!*/
+/*}*/
+
+.btn-black {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: 2px solid #000; /* Black border */
+    border-radius: 5px; /* Optional rounded corners */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 20px; /* Padding for the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    text-transform: uppercase; /* Optional: Make text uppercase */
 }
+
+/*.btn-black:hover {*/
+/*    background-color: #fff; !* White background on hover *!*/
+/*    color: #000; !* Black text on hover *!*/
+/*    border-color: #000; !* Keep the border black *!*/
+/*    transform: translateY(-2px); !* Slight lift effect *!*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); !* Add shadow on hover *!*/
+/*}*/
+
 
 
 /* Mobile responsiveness */
@@ -863,4 +891,21 @@ p.text-light {
     .iconbox {
         min-height: auto;
     }
+}
+
+.btn-no-hover:hover {
+    background-color: inherit; /* Keep the original background */
+    color: inherit; /* Keep the original text color */
+    border-color: inherit; /* Keep the original border color */
+    transform: none; /* Remove any transform effect */
+    box-shadow: none; /* Remove the shadow */
+}
+
+/* Disable hover effect on the specific button with the .btn-outline-black class */
+.no-hover-btn.btn-outline-black:hover {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: inherit !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
