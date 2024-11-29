@@ -11,3 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 2000); // Delay before bounce animation starts
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".highlighted-item");
+    let index = 0;
+
+    function highlightNext() {
+        items.forEach((item, idx) => {
+            item.classList.toggle("active", idx === index);
+        });
+        index = (index + 1) % items.length;
+    }
+
+    // Highlight items one by one every 2 seconds
+    setInterval(highlightNext, 2000);
+
+    // Initialize the first item as active
+    highlightNext();
+});
