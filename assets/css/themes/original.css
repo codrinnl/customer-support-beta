@@ -1024,7 +1024,7 @@ p.text-light {
 }
 
 .highlighted-benefits .highlighted-item.active {
-    color: #FFA500; /* Orange color for highlighted item */
+    color: #d66f3c; /* Orange color for highlighted item */
     opacity: 1; /* Full visibility for active item */
 }
 
@@ -1070,4 +1070,155 @@ p.text-light {
     font-weight: bold;
     color: #fff !important; /* Text color */
     line-height: 3;
+}
+
+.star-separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2));
+    margin: 15px 0;
+}
+
+.clients-section {
+    text-align: left;
+}
+
+.clients-header {
+    margin-bottom: 20px;
+}
+
+.clients-reviews {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between each review item and the separator */
+    position: relative; /* For proper separator alignment */
+}
+
+.review-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.community-icon {
+    width: 50px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 5px; /* Space between the icon and text */
+}
+
+.star-icon {
+    width: 120px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and text */
+}
+
+.review-text {
+    font-size: 14px;
+    color: #aaa; /* Lighter text for better contrast */
+}
+
+/* Separator Styling */
+.review-separator {
+    height: 50px; /* Match the height of icons */
+    width: 2px; /* Thin vertical line */
+    background-color: #555; /* Neutral gray color */
+    opacity: 0.8; /* Slight transparency */
+}
+
+/* General Footer Styling */
+.footer {
+    background-color: #000; /* Dark background */
+    padding: 60px 20px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Footer Grid Layout */
+.footer_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left Column Styling */
+.footer_left {
+    text-align: left;
+}
+
+.footer_logo {
+    /*max-width: 100px;*/
+    margin-bottom: 15px;
+}
+
+.footer_contact {
+    margin-top: 15px;
+}
+
+.footer_contact p {
+    margin: 5px 0;
+}
+
+.footer_link {
+    color: #ddd;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+.footer_link:hover {
+    color: #ffa500; /* Accent color */
+}
+
+/* Center Column Styling */
+.footer_links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer_column p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer_column .footer_link {
+    margin-bottom: 8px;
+}
+
+/* Right Column: Social and Logos */
+.footer_social {
+    text-align: left;
+}
+
+.social_links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.socmed_icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.socmed_icon:hover {
+    opacity: 0.7;
+}
+
+.footer_logos {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.client_logo {
+    max-width: 80px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client_logo:hover {
+    filter: none;
 }
