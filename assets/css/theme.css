@@ -3550,17 +3550,18 @@ figure + .ld-cart-product-details {
   padding-left: 2.4em;
   padding-right: 2.4em;
 }
-.btn:hover {
-  border-color: transparent;
-  background-color: var(--color-primary);
-  color: #fff;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);
-}
-.btn:hover .btn-gradient-bg-hover {
-  opacity: 1;
-}
+/*.btn:hover {*/
+/*  border-color: transparent;*/
+/*  background-color: var(--color-primary);*/
+/*  background-color: var(--color-primary);*/
+/*  color: #fff;*/
+/*  -webkit-transform: translateY(-1px);*/
+/*          transform: translateY(-1px);*/
+/*  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);*/
+/*}*/
+/*.btn:hover .btn-gradient-bg-hover {*/
+/*  opacity: 1;*/
+/*}*/
 
 /* Sizes*/
 .btn-xsm > span {

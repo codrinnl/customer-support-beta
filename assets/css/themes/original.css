@@ -970,11 +970,11 @@ p.text-light {
 }
 
 .btn-no-hover:hover {
-    background-color: inherit; /* Keep the original background */
-    color: inherit; /* Keep the original text color */
-    border-color: inherit; /* Keep the original border color */
-    transform: none; /* Remove any transform effect */
-    box-shadow: none; /* Remove the shadow */
+    /* background-color: inherit; */ /* Keep the original background */
+    /* color: inherit; */ /* Keep the original text color */
+    /* border-color: inherit; */ /* Keep the original border color */
+    /* transform: none; */ /* Remove any transform effect */
+    /* box-shadow: none; */ /* Remove the shadow */
 }
 
 /* Disable hover effect on the specific button with the .btn-outline-black class */
