@@ -6,13 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="5fbf4378-b4a5-4787-86a7-683d68409900" name="Changes" comment="changed colors/design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-vendors.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-vendors.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/themes/original.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/themes/original.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +38,9 @@
     &quot;accountId&quot;: &quot;f7f04812-4aeb-40b5-9e7a-ff543aac116b&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -41,14 +53,21 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Stuff/customer support beta/assets/img/logo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Stuff\customer support beta\assets\img\logo" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,7 +84,12 @@
       <option name="presentableId" value="Default" />
       <updated>1732097480294</updated>
       <workItem from="1732097481490" duration="6141000" />
-      <workItem from="1732176060720" duration="20187000" />
+      <workItem from="1732176060720" duration="20838000" />
+      <workItem from="1732875012071" duration="14000" />
+      <workItem from="1732875064353" duration="14574000" />
+      <workItem from="1733144084022" duration="9408000" />
+      <workItem from="1733219740772" duration="14149000" />
+      <workItem from="1733306121940" duration="9321000" />
     </task>
     <task id="LOCAL-00001" summary="changed colors/design">
       <option name="closed" value="true" />
@@ -91,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732196966000</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed colors/design">
+      <option name="closed" value="true" />
+      <created>1732201958242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732201958242</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

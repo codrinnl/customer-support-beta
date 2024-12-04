@@ -708,7 +708,7 @@ h6 {
 h2, h3, p {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: #FFFFFF; /* White for contrast */
+    color: black; /* White for contrast */
 }
 
 /* Subheading style */
@@ -1213,12 +1213,156 @@ p.text-light {
     margin-top: 15px;
 }
 
-.client_logo {
-    max-width: 80px;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+/* Section Styling */
+#offer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 80px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.client_logo:hover {
-    filter: none;
+/* Logo Styling */
+.logo-wrapper {
+    margin-bottom: 20px;
 }
+
+.offer-logo {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Title Styling */
+.offer-title {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.offer-title .highlight {
+    color: #f1b100; /* Match your logo color */
+}
+
+/* Subtitle Styling */
+.offer-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+
+.offer-button:hover {
+    background-color: #d19a00;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*#offer-section {*/
+/*    opacity: 0;*/
+/*    transform: translateY(30px);*/
+/*    transition: opacity 0.6s ease, transform 0.6s ease;*/
+/*}*/
+
+/*#offer-section.loaded {*/
+/*    opacity: 1;*/
+/*    transform: translateY(0);*/
+/*}*/
+#multi-step-form {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    transition: all 0.4s ease;
+}
+
+.form-step {
+    display: none;
+    text-align: center;
+}
+
+.form-step.active {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.option-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #f1b100;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.option-button:hover {
+    background-color: #d19a00;
+}
+
+.option-button.selected {
+    background-color: #d19a00;
+}
+
+.next-step,.prev-step {
+    padding: 0; /* Remove padding */
+    margin: 0;  /* Remove margin */
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+    width: 50px; /* Set width of button to match the image size */
+    height: 50px; /* Set height of button to match the image size */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+button.next-step::after,
+button.prev-step::after {
+    content: '';
+    display: block;
+    width: 100%; /* Make the image fill the button */
+    height: 100%; /* Make the image fill the button */
+    background-size: contain; /* Ensure the image fits within the button */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
+
+button.next-step::after {
+    background-image: url('/assets/img/icon/next.png'); /* Right arrow icon */
+}
+
+button.prev-step::after {
+    background-image: url('/assets/img/icon/back.png'); /* Left arrow icon */
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
