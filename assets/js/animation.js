@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-offer');
     const getInTouchBtn = document.getElementById('get-in-touch-btn');
+    const startNowBtn = document.getElementById('start-now-btn');
+    const contactBtn = document.getElementById('contact-btn');
     const offerSection = document.getElementById('offer-section');
     const formSection = document.getElementById('multi-step-form');
     const steps = document.querySelectorAll('.form-step');
@@ -49,6 +51,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // "Get in Touch" button scrolls and activates the form
     getInTouchBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay for smooth scroll, then activate the form
+        setTimeout(() => activateForm(), 800);
+    });
+
+    startNowBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay for smooth scroll, then activate the form
+        setTimeout(() => activateForm(), 800);
+    });
+
+    contactBtn.addEventListener('click', function (event) {
         event.preventDefault();
         offerSection.scrollIntoView({ behavior: 'smooth' });
 
@@ -96,12 +114,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const getInTouchBtn = document.getElementById('get-in-touch-btn');
+    const startNowBtn = document.getElementById('start-now-btn');
     const startOfferBtn = document.getElementById('start-offer');
+    const contactBtn = document.getElementById('contact-btn');
     const offerSection = document.getElementById('offer-section');
     const formSection = document.getElementById('multi-step-form');
 
     // Scroll to the offer section and start the form
     getInTouchBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay to ensure smooth scrolling is complete before showing the form
+        setTimeout(() => {
+            offerSection.style.display = 'none'; // Hide the static offer content
+            formSection.classList.remove('hidden'); // Reveal the form
+        }, 800); // Adjust timing if needed
+    });
+
+    startNowBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay to ensure smooth scrolling is complete before showing the form
+        setTimeout(() => {
+            offerSection.style.display = 'none'; // Hide the static offer content
+            formSection.classList.remove('hidden'); // Reveal the form
+        }, 800); // Adjust timing if needed
+    });
+
+    contactBtn.addEventListener('click', function (event) {
         event.preventDefault();
         offerSection.scrollIntoView({ behavior: 'smooth' });
 
