@@ -126,9 +126,10 @@
                             <a class="btn btn-outline-black btn-no-hover px-4 py-3 mr-3" href="#services">
                                 Explore Services
                             </a>
-                            <a class="btn btn-black btn-no-hover px-4 py-3" href="#contact">
+                            <a id="get-in-touch-btn" class="btn btn-black btn-no-hover px-4 py-3" href="#offer-section">
                                 Get in Touch
                             </a>
+
 
                         </div>
                     </div><!-- /.col-md-6 -->
@@ -1385,7 +1386,7 @@
                 <div class="offer-content text-center">
                     <!-- Company Logo -->
                     <div class="logo-wrapper">
-                        <img src="/assets/img/logo/nextlogic-logo-yellow.svg" alt="Company Logo" class="offer-logo">
+                        <img alt="Company Logo" class="offer-logo" src="/assets/img/logo/nextlogic-logo-yellow.svg">
                     </div>
                     <!-- Title -->
                     <h2 class="offer-title">
@@ -1393,11 +1394,12 @@
                     </h2>
                     <!-- Subtitle -->
                     <p class="offer-subtitle">
-                        Unlock your potential with our tailored services and say goodbye to inefficiency. It's time to focus on what truly matters.
+                        Unlock your potential with our tailored services and say goodbye to inefficiency. It's time to
+                        focus on what truly matters.
                     </p>
                     <!-- Call-to-Action Button -->
                     <div class="offer-action">
-                        <button id="start-offer" class="btn-black">
+                        <button class="btn-black" id="start-offer">
                             <span>Start Here</span>
                         </button>
                     </div>
@@ -1405,20 +1407,25 @@
             </div>
         </section>
 
-        <section id="multi-step-form" class="hidden">
+        <section class="hidden" id="multi-step-form">
             <div class="form-container">
                 <div class="form-step active" data-step="1">
                     <h2>Maximize your ROI! 🎉</h2>
                     <p>This question is required.</p>
                     <ul>
                         <li>
-                            <button class="option-button" data-option="part-time">Part-Time starting at $1300 per month</button>
+                            <button class="option-button" data-option="part-time">Part-Time starting at $1300 per
+                                month
+                            </button>
                         </li>
                         <li>
-                            <button class="option-button" data-option="30-hour">30 Hour starting at $2000 per month</button>
+                            <button class="option-button" data-option="30-hour">30 Hour starting at $2000 per month
+                            </button>
                         </li>
                         <li>
-                            <button class="option-button" data-option="full-time">Full-Time starting at $2500 per month</button>
+                            <button class="option-button" data-option="full-time">Full-Time starting at $2500 per
+                                month
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -1427,12 +1434,24 @@
                     <h2>What is your Assistant's emphasis? ➕</h2>
                     <p>This question is required.</p>
                     <ul>
-                        <li><button class="option-button" data-option="exec-admin">Executive Admin</button></li>
-                        <li><button class="option-button" data-option="marketing">Marketing</button></li>
-                        <li><button class="option-button" data-option="client-support">Client Support</button></li>
-                        <li><button class="option-button" data-option="operations">Operations</button></li>
-                        <li><button class="option-button" data-option="finance">Finance</button></li>
-                        <li><button class="option-button" data-option="personal-admin">Personal Admin</button></li>
+                        <li>
+                            <button class="option-button" data-option="exec-admin">Executive Admin</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="marketing">Marketing</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="client-support">Client Support</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="operations">Operations</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="finance">Finance</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="personal-admin">Personal Admin</button>
+                        </li>
                     </ul>
                 </div>
 
@@ -1440,42 +1459,69 @@
                     <h2>Experience Matters! 🏆</h2>
                     <p>Choose your industry (for a tailored experience):</p>
                     <ul>
-                        <li><button class="option-button" data-option="tech-solutions">Tech Solutions</button></li>
-                        <li><button class="option-button" data-option="financial-services">Financial Services</button></li>
-                        <li><button class="option-button" data-option="real-estate">Real Estate</button></li>
-                        <li><button class="option-button" data-option="marketing-agency">Marketing Agency</button></li>
-                        <li><button class="option-button" data-option="legal">Legal</button></li>
-                        <li><button class="option-button" data-option="healthcare">Healthcare</button></li>
-                        <li><button class="option-button" data-option="personal">Personal</button></li>
+                        <li>
+                            <button class="option-button" data-option="tech-solutions">Tech Solutions</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="financial-services">Financial Services</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="real-estate">Real Estate</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="marketing-agency">Marketing Agency</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="legal">Legal</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="healthcare">Healthcare</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="personal">Personal</button>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="form-step" data-step="4">
                     <h2>List your top 3-5 tasks/responsibilities 📝</h2>
                     <p>This question is required.</p>
-                    <input type="text" id="tasks" name="tasks" placeholder="For example: Answering customer queries, Social Media Management, etc.">
+                    <input id="tasks" name="tasks" placeholder="For example: Answering customer queries, Social Media Management, etc."
+                           type="text">
                 </div>
 
                 <div class="form-step" data-step="5">
                     <h2>What's your ideal Assistant's Vibe? 🩷</h2>
                     <p>Choose the top 3-5 high performing traits you think are most important:</p>
                     <ul>
-                        <li><button class="option-button" data-option="organized">Organized</button></li>
-                        <li><button class="option-button" data-option="communicator">Communicator</button></li>
-                        <li><button class="option-button" data-option="proactive">Proactive</button></li>
-                        <li><button class="option-button" data-option="empathetic">Empathetic</button></li>
-                        <li><button class="option-button" data-option="creative">Creative</button></li>
-                        <li><button class="option-button" data-option="problem-solver">Problem Solver</button></li>
+                        <li>
+                            <button class="option-button" data-option="organized">Organized</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="communicator">Communicator</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="proactive">Proactive</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="empathetic">Empathetic</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="creative">Creative</button>
+                        </li>
+                        <li>
+                            <button class="option-button" data-option="problem-solver">Problem Solver</button>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="form-step" data-step="6">
                     <h2>Let's get to know you better! 👋</h2>
                     <p>Fill in your details so we can connect:</p>
-                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input id="first-name" name="first-name" placeholder="First Name" required type="text">
+                    <input id="last-name" name="last-name" placeholder="Last Name" required type="text">
+                    <input id="phone" name="phone" placeholder="Phone Number" required type="tel">
+                    <input id="email" name="email" placeholder="Email" required type="email">
                 </div>
                 <!-- Additional steps follow the same structure -->
 
@@ -1487,12 +1533,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
 
 
         <section class="vc_row pt-100 pb-60 contact-section" id="contact" style="background-color: #f4f4f4;">

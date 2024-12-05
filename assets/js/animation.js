@@ -32,71 +32,89 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-offer');
+    const getInTouchBtn = document.getElementById('get-in-touch-btn');
     const offerSection = document.getElementById('offer-section');
     const formSection = document.getElementById('multi-step-form');
     const steps = document.querySelectorAll('.form-step');
-    const nextButtons = document.querySelectorAll('.next-step');
-    const prevButtons = document.querySelectorAll('.prev-step');
-    const submitButton = document.querySelector('.submit');
     let currentStep = 0;
 
-    // Start the form
-    startButton.addEventListener('click', function () {
-        offerSection.classList.add('hidden');
-        formSection.classList.remove('hidden');
+    function activateForm() {
+        offerSection.classList.add('hidden'); // Hide offer section
+        formSection.classList.add('show');   // Show and activate the form
         steps[currentStep].classList.add('active');
+    }
+
+    // "Start Here" button activates the form
+    startButton.addEventListener('click', activateForm);
+
+    // "Get in Touch" button scrolls and activates the form
+    getInTouchBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay for smooth scroll, then activate the form
+        setTimeout(() => activateForm(), 800);
     });
 
-    // Option button click behavior (toggling "selected" state)
+    // Option button click behavior
     document.querySelectorAll('.option-button').forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove 'selected' class from all buttons in the current step
+        button.addEventListener('click', function () {
             const stepOptions = this.closest('.form-step').querySelectorAll('.option-button');
             stepOptions.forEach(option => option.classList.remove('selected'));
-
-            // Add 'selected' class to the clicked button
             this.classList.add('selected');
         });
     });
 
-    // Navigate to next step
-    nextButtons.forEach((btn) => {
-        btn.addEventListener('click', function () {
+    // Navigation (Next and Previous buttons)
+    document.querySelectorAll('.next-step, .prev-step').forEach(button => {
+        button.addEventListener('click', function () {
+            const isNext = button.classList.contains('next-step');
             steps[currentStep].classList.remove('active');
-            currentStep++;
+            currentStep += isNext ? 1 : -1;
             steps[currentStep].classList.add('active');
-
-            // Show/Hide buttons
-            if (currentStep === steps.length - 1) {
-                btn.classList.add('hidden');
-                submitButton.classList.remove('hidden');
-            }
-            prevButtons.forEach((btn) => btn.classList.remove('hidden'));
+            toggleNavigationButtons(currentStep, steps.length);
         });
     });
 
-    // Navigate to previous step
-    prevButtons.forEach((btn) => {
-        btn.addEventListener('click', function () {
-            steps[currentStep].classList.remove('active');
-            currentStep--;
-            steps[currentStep].classList.add('active');
-
-            // Show/Hide buttons
-            if (currentStep === 0) {
-                btn.classList.add('hidden');
-            }
-            submitButton.classList.add('hidden');
-            nextButtons.forEach((btn) => btn.classList.remove('hidden'));
-        });
-    });
-
-    // Submit the form
-    submitButton.addEventListener('click', function () {
+    // Submit button behavior
+    document.querySelector('.submit').addEventListener('click', function () {
         alert('Form submitted! Thank you for your response.');
-        formSection.classList.add('hidden');
-        offerSection.classList.remove('hidden'); // Reset to offer section
-        currentStep = 0; // Reset step
-        steps.forEach((step) => step.classList.remove('active'));
+        formSection.classList.remove('show');
+        offerSection.classList.remove('hidden');
+        currentStep = 0;
+        steps.forEach(step => step.classList.remove('active'));
+    });
+
+    function toggleNavigationButtons(step, totalSteps) {
+        document.querySelector('.prev-step').classList.toggle('hidden', step === 0);
+        document.querySelector('.next-step').classList.toggle('hidden', step === totalSteps - 1);
+        document.querySelector('.submit').classList.toggle('hidden', step !== totalSteps - 1);
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const getInTouchBtn = document.getElementById('get-in-touch-btn');
+    const startOfferBtn = document.getElementById('start-offer');
+    const offerSection = document.getElementById('offer-section');
+    const formSection = document.getElementById('multi-step-form');
+
+    // Scroll to the offer section and start the form
+    getInTouchBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Delay to ensure smooth scrolling is complete before showing the form
+        setTimeout(() => {
+            offerSection.style.display = 'none'; // Hide the static offer content
+            formSection.classList.remove('hidden'); // Reveal the form
+        }, 800); // Adjust timing if needed
+    });
+
+    // Start the form directly when "Start Here" is clicked
+    startOfferBtn.addEventListener('click', function () {
+        offerSection.style.display = 'none';
+        formSection.classList.remove('hidden');
     });
 });

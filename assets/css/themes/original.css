@@ -1280,7 +1280,18 @@ p.text-light {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 40px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden; /* Hidden by default */
+    pointer-events: none; /* Prevent interactions until shown */
     transition: all 0.4s ease;
+}
+
+#multi-step-form.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* Ensure form is visible */
+    pointer-events: auto; /* Enable interactions */
 }
 
 .form-step {
