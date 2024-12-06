@@ -1094,6 +1094,29 @@ p.text-light {
     position: relative; /* For proper separator alignment */
 }
 
+
+.clients-logos {
+    display: flex;
+    justify-content: center; /* Align the logos container horizontally */
+    align-items: center;
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Space between logos */
+    justify-items: center; /* Center align each logo */
+    align-items: center; /* Vertically align logos */
+    margin-top: 80px;
+}
+
+.client-logo {
+    max-width: 100%; /* Ensure logos are responsive */
+    height: 100px; /* Set a consistent height for all logos */
+    object-fit: contain; /* Ensures logos fit nicely within their container */
+}
+
+
 .review-item {
     display: flex;
     flex-direction: column;
