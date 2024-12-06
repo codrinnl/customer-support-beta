@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
     highlightNext();
 });
 
+
+emailjs.init({
+    publicKey: "UrQa9iNIShnCF-Npq"
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-offer');
     const getInTouchBtn = document.getElementById('get-in-touch-btn');
@@ -46,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const formSection = document.getElementById('multi-step-form');
     const steps = document.querySelectorAll('.form-step');
     let currentStep = 0;
+    const collectedData = {}; // Store the collected data from each step
+
 
     function activateForm() {
         offerSection.classList.add('hidden'); // Hide offer section
@@ -143,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const stepOptions = this.closest('.form-step').querySelectorAll('.option-button');
             stepOptions.forEach(option => option.classList.remove('selected'));
             this.classList.add('selected');
+            const name = this.getAttribute('name');
+            collectedData[name] = this.getAttribute('value');
         });
     });
 
@@ -159,7 +168,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Submit button behavior
     document.querySelector('.submit').addEventListener('click', function () {
-        alert('Form submitted! Thank you for your response.');
+        event.preventDefault();
+        const inputs = steps[currentStep].querySelectorAll('input');
+        inputs.forEach(input => {
+            collectedData[input.name] = input.value;
+        });
+
+        emailjs
+            .send('service_l2dqd0e', 'template_9zucxb8', collectedData)
+            .then(response => {
+                alert('Form submitted successfully!');
+                formSection.classList.remove('show');
+            })
+            .catch(error => {
+                console.error('EmailJS error:', error);
+                alert('There was an issue submitting the form. Please try again.');
+            });
+
         formSection.classList.remove('show');
         offerSection.classList.remove('hidden');
         currentStep = 0;
