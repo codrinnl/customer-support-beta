@@ -173,6 +173,79 @@ h6 {
     margin-left: 120px;
 }
 
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-top: 1px solid #ddd;
+}
+
+/* Mobile Menu Toggle */
+.nav-trigger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+.nav-trigger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s ease;
+}
+
+.nav-trigger[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-trigger[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-trigger[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .main-nav-container {
+        display: none; /* Hide main nav for mobile */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .cta-container {
+        display: none; /* Optionally hide CTA on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-default {
+        width: 150px; /* Adjust logo size for small screens */
+    }
+
+    .navbar-collapse {
+        gap: 15px;
+    }
+}
+
 .col-auto.cta-container {
     margin-right: 130px;
 }
@@ -201,6 +274,19 @@ h6 {
     }
 }
 
+@media (max-width: 768px) {
+    .mt-4 {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        gap: 12px; /* Add space between buttons */
+    }
+
+    .mt-4 .btn {
+        width: 100%; /* Make buttons take full width on mobile */
+        text-align: center; /* Center text inside the button */
+    }
+}
 
 /* Call-to-Action Button */
 .btn-gradient-yellow {
@@ -564,6 +650,16 @@ h6 {
 @media (min-width: 992px) {
     .vc_row.contact-section .col-md-8 {
         width: auto !important; /* Forcefully overrides the default width */
+    }
+}
+
+@media (max-width: 768px) {
+    .font-weight-bold {
+        line-height: 1.2 !important; /* Reduce line-height for bold text */
+    }
+
+    .vc_row .mb-15 {
+        margin-bottom: 10px; /* Reduce bottom margin between paragraphs */
     }
 }
 
@@ -1072,6 +1168,29 @@ p.text-light {
     line-height: 3;
 }
 
+@media (max-width: 768px) {
+    .benefits-list {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .benefits-item {
+        flex: 1 1 100%; /* Make each item take full width */
+        margin-bottom: 20px; /* Add space between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-item {
+        flex: 1 1 100%; /* Ensure each item is full width on mobile */
+    }
+
+    .benefits-text {
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+}
+
+
 .star-separator {
     border: 0;
     height: 1px;
@@ -1236,6 +1355,58 @@ p.text-light {
     margin-top: 15px;
 }
 
+@media (max-width: 768px) {
+    .footer_grid {
+        grid-template-columns: 1fr 1fr; /* Change to 2 columns on smaller screens */
+        gap: 20px;
+    }
+
+    .footer_left, .footer_links, .footer_social {
+        text-align: center;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_column {
+        margin-bottom: 20px;
+    }
+
+    .social_links {
+        justify-content: center;
+    }
+
+    .footer_logo {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer_grid {
+        grid-template-columns: 1fr; /* Stack all items in one column on mobile */
+        gap: 15px;
+    }
+
+    .footer_logo {
+        width: 100px; /* Adjust logo size */
+    }
+
+    .footer_contact, .footer_links, .footer_social {
+        padding: 0 10px;
+    }
+
+    .footer_column p {
+        font-size: 16px; /* Make column headings larger for mobile */
+    }
+
+    .socmed_icon {
+        width: 30px; /* Increase icon size on mobile */
+        height: 30px;
+    }
+}
+
 /* Section Styling */
 #offer-section {
     display: flex;
@@ -1278,7 +1449,6 @@ p.text-light {
     color: #666;
     margin-bottom: 40px;
 }
-
 
 
 .offer-button:hover {
@@ -1359,9 +1529,9 @@ ul li {
     background-color: #d19a00;
 }
 
-.next-step,.prev-step {
+.next-step, .prev-step {
     padding: 0; /* Remove padding */
-    margin: 0;  /* Remove margin */
+    margin: 0; /* Remove margin */
     border: none; /* Remove border */
     background: none; /* Remove background */
     width: 50px; /* Set width of button to match the image size */
