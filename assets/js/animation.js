@@ -155,6 +155,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.getElementById('tasks').addEventListener('input', function () {
+        collectedData['tasks'] = this.value;
+        console.log('Tasks Updated:', collectedData);
+    });
+
     // Navigation (Next and Previous buttons)
     document.querySelectorAll('.next-step, .prev-step').forEach(button => {
         button.addEventListener('click', function () {
@@ -173,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
         inputs.forEach(input => {
             collectedData[input.name] = input.value;
         });
+        console.log(collectedData);
 
         emailjs
             .send('service_l2dqd0e', 'template_9zucxb8', collectedData)
